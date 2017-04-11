@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通过xhr对象加载脚本，实现无阻塞脚本</title>
+</head>
+<body>
+<script type="text/javascript">
+    var xhr=new XMLHttpRequest();
+        xhr.open("get","script1.js",true);
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4){
+                if(xhr.status>=200&&xhr.status<300||xhr.status==304){
+                    var script=document.createElement("script");
+                        script.type="text/javascript";
+                        script.text=xhr.responseText;
+                        document.body.appendChild(script);
+                }
+            }
+        }
+        xhr.send(null);
+
+
+   /* 优点是，您可以下载不立即执行的 JavaScript 代码。由于代码返回在<script>标签之外（换句话说不受<script>标签约束），它下载后不会自动执行，这使得您可以推迟执行，直到一切都准备好了。另一个优点是，同样的代码在所有现代浏览器中都不会引发异常。
+
+    限制是：JavaScript 文件必须与页面放置在同一个域内，不能从 CDN 下载（CDN 指"内容投递网络（Content Delivery Network）"，所以大型网页通常不采用 XHR 脚本注入技术。
+   */
+
+</script>
+</body>
+</html>

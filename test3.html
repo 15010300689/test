@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            width: 1190px;
+            margin: 15px auto;
+            position:relative;
+        }
+        .fragment_link {
+            margin-top: 20px;
+            background: #fff;
+        }
+        .fragment_link h3 {
+            font-size: 20px;
+            color: #333;
+            height: 60px;
+            line-height: 60px;
+            padding-left: 20px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .link_list {
+            padding: 26px 20px 42px 20px;
+            list-style: none;
+            font-size:0;
+        }
+        .link_list li {
+            width: 160px;
+            /* height: 195px; */
+            margin-left: 34px;
+            display:inline-block;
+            font-size:12px;
+        }
+        .link_list li.noMarginLeft {
+            margin-left: 0;
+        }
+        .link_list li a {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .link_list li:hover a {
+            text-decoration: none;
+        }
+        .bg_show,.bg_hide {
+            position: relative;
+            height: 100%;
+            width:100%;
+        }
+        .bg_show img {
+            width: 100%;
+        }
+        .bg_show div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .bg_show div h4 {height: 28px;line-height: 28px;font-size: 16px;color: #ff552e;}
+        .bg_show div span {font-size: 12px;color: #ccc;}
+        .bg_hide {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #333;
+            filter:alpha(opacity=50);
+            -moz-opacity:0.5;
+            -khtml-opacity: 0.5;
+            opacity: 0.5;
+            z-index: 9;
+        }
+        .link_list li:hover .bg-btn {
+            display: inline;
+        }
+        .link_list li:hover .bg_hide {
+            display: block;
+        }
+        .bg-btn {
+            display: none;
+            position: absolute;
+            top: 128px;
+            left: 34px;
+            width: 93px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            background: #ff552e;
+            z-index: 10;
+        }
+        .bg-btn:hover {
+            background: #ff332e;
+        }
+    </style>
+</head>
+<body class="noscroll">
+<div class="fragment_link">
+    <h3>快捷服务</h3>
+    <ul class="link_list">
+        <li class="noMarginLeft">
+            <a href="//zhaobiao.58.com/pc/quickpost/index?cateid3=4063" target="_blank" onclick="clickLog('from=pc_index_yhbdfw_kjfw_zhuagnxiu');">
+                <div class="bg_show">
+                    <img src="//img.58cdn.com.cn/ds/icon_newdl/bg-weixiu.png" />
+                    <div>
+                        <h4>我要装修</h4>
+                        <span>靠谱推荐三家选</span>
+                    </div>
+                </div>
+                <div class="bg_hide">
+                </div>
+                <span class="bg-btn">立即前往</span>
+            </a>
+        </li>
+        <li>
+            <a href="//zhaobiao.58.com/pc/bid/apply?city=bj&cateId=4273" target="_blank" onclick="clickLog('from=pc_index_yhbdfw_kjfw_baojie');">
+                <div class="bg_show">
+                    <img src="//img.58cdn.com.cn/ds/icon_newdl/bg-shengxinbj.png" />
+                    <div>
+                        <h4>省心保洁</h4>
+                        <span>轻松保洁换新家</span>
+                    </div>
+                </div>
+                <div class="bg_hide">
+                </div>
+                <span class="bg-btn">立即前往</span>
+            </a>
+        </li>
+        <li>
+            <a href="//zhaobiao.58.com/pc/imc/zuche?city=bj&cateid=5196" target="_blank" onclick="clickLog('from=pc_index_yhbdfw_kjfw_zuche');">
+                <div class="bg_show">
+                    <img src="//img.58cdn.com.cn/ds/icon_newdl/bg-zuche.png" />
+                    <div>
+                        <h4>我要租车</h4>
+                        <span>租车出游放心选</span>
+                    </div>
+                </div>
+                <div class="bg_hide">
+                </div>
+                <span class="bg-btn">立即前往</span>
+            </a>
+        </li>
+        <li>
+            <a href="//zhaobiao.58.com/pc/bid/apply?city=bj&cateId=4272" target="_blank" onclick="clickLog('from=pc_index_yhbdfw_kjfw_baomu');">
+                <div class="bg_show">
+                    <img src="//img.58cdn.com.cn/ds/icon_newdl/bg-baomu.png" />
+                    <div>
+                        <h4>无忧保姆</h4>
+                        <span>靠谱保姆更安心</span>
+                    </div>
+                </div>
+                <div class="bg_hide">
+                </div>
+                <span class="bg-btn">立即前往</span>
+            </a>
+        </li>
+        <li>
+            <a href="//zhaobiao.58.com/pc/bid/goSubmit?plid=1&pcateid=4065" target="_blank" onclick="clickLog('from=pc_index_yhbdfw_kjfw_gongshang');">
+                <div class="bg_show">
+                    <img src="//img.58cdn.com.cn/ds/icon_newdl/bg-gongshangzc.png" />
+                    <div>
+                        <h4>工商注册</h4>
+                        <span>人人都是大老板</span>
+                    </div>
+                </div>
+                <div class="bg_hide">
+                </div>
+                <span class="bg-btn">立即前往</span>
+            </a>
+        </li>
+        <li>
+            <a href="//zhaobiao.58.com/pc/imc/huoyun?city=bj&cateid=5307" target="_blank" onclick="clickLog('from=pc_index_yhbdfw_kjfw_wuliu');">
+                <div class="bg_show">
+                    <img src="//img.58cdn.com.cn/ds/icon_newdl/bg-huoyunwl.png" />
+                    <div>
+                        <h4>货运物流</h4>
+                        <span>靠谱公司发货快</span>
+                    </div>
+                </div>
+                <div class="bg_hide">
+                </div>
+                <span class="bg-btn">立即前往</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
